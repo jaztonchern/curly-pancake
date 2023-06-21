@@ -7,8 +7,8 @@ When a change is committed to the main branch of this repository, the following 
 This is an example of the message:</br>
 <img width="414" alt="Screenshot 2023-06-21 at 15 11 49" src="https://github.com/jaztonchern/curly-pancake/assets/88361707/ada4854a-cf33-4c2f-bece-994efc4738b9"></br>
 
-The following GitHub secrets need to be updated in order for this to work:</br>
-TELEGRAM_ID - This refers to the ID number of the telegram account, <strong>NOT</strong> the telegram username.
+The following GitHub secrets need to be updated in order for this to work:
+* TELEGRAM_ID - This refers to the ID number of the telegram account, <strong>NOT</strong> the telegram username.
 
 Here are the steps to obtain the ID number in the Telegram app.
 
@@ -19,5 +19,5 @@ Here are the steps to obtain the ID number in the Telegram app.
 </br>3. You will find your ID number beside the "Id" header.
 </br>
 <strong>DO NOT</strong> edit the following GitHub secrets:
-TELEGRAM_BOT - This GitHub secret points to the HTTP API of the telegram bot that sends out the automated messages.
+* TELEGRAM_BOT - This GitHub secret points to the HTTP API of the telegram bot that sends out the automated messages.
 
