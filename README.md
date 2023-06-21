@@ -8,4 +8,5 @@ This is an example of the message:</br>
 <img width="414" alt="Screenshot 2023-06-21 at 15 11 49" src="https://github.com/jaztonchern/curly-pancake/assets/88361707/ada4854a-cf33-4c2f-bece-994efc4738b9"></br>
 
 The following GitHub secrets need to be updated in order for this to work:
+TELEGRAM_ID
 
