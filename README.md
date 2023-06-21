@@ -11,13 +11,14 @@ This is an example of the message:</br>
   
 <strong>DO NOT</strong> edit the following GitHub secrets:
 * TELEGRAM_BOT - This GitHub secret points to the HTTP API of the telegram bot that sends out the automated messages.
-  
-  
-  
+
+</br></br>
+
 The following GitHub secrets need to be updated in order for this to work:
 * TELEGRAM_ID - This refers to the ID number of the telegram account, <strong>NOT</strong> the telegram username.
   
-  
+</br>
+
 Here are the steps to obtain the ID number in the Telegram app.
 
 </br>1. Search for userinfobot in the search bar, as shown below.</br>
