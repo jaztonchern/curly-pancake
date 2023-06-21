@@ -16,6 +16,6 @@ jobs:
       - name: Send notification to Telegram
         uses: appleboy/telegram-action@v0.1.0
         with:
-          to: ${{ secrets.TELEGRAM_ID }}
-          token: ${{ secrets.TELEGRAM_BOT }}
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: A commit has been made to the repository!
