@@ -20,4 +20,4 @@ jobs:
 
       - name: Run Cued Recall Task
         run: |
-          node script.js
+          node app.js
