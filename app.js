@@ -1,3 +1,5 @@
+const readline = require('readline');
+
 const words = [
   { cue: 'Fruit', word: 'Apple' },
   { cue: 'Color', word: 'Blue' },
@@ -12,19 +14,28 @@ function getRandomCue() {
 }
 
 function promptRecall(cue) {
-  const userAnswer = prompt(`Recall a word associated with: ${cue}`);
-  return userAnswer;
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  return new Promise(resolve => {
+    rl.question(`Recall a word associated with: ${cue}\n`, answer => {
+      rl.close();
+      resolve(answer);
+    });
+  });
 }
 
-function startCuedRecallTask() {
+async function startCuedRecallTask() {
   console.log('---- Cued Recall Task ----');
   let score = 0;
 
   for (let i = 0; i < words.length; i++) {
     const cue = getRandomCue();
     const expectedWord = words.find(word => word.cue === cue).word;
-    
-    const userAnswer = promptRecall(cue);
+
+    const userAnswer = await promptRecall(cue);
     if (userAnswer.toLowerCase() === expectedWord.toLowerCase()) {
       score++;
       console.log('Correct!');
