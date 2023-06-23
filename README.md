@@ -1,6 +1,28 @@
 # curly-pancake
 
-This repository consists of a simple workflow that is executed whenever a change is committed to the **main** branch of this repository.
+This repository is a simple application that deploys a container.
+
+## 1. Clone the repository to a local device
+
+`git clone https://github.com/jaztonchern/curly-pancake`
+
+## 2. Make edits to the content
+
+Changes can be made to the *index.html* file.
+
+## 3. Build the container
+
+Enter the directory of the cloned repository `cd curly-pancake`
+
+Build the container `docker build . -t <your_container_name>`, and replace `<your_container_name>` with any relevant name for your container.
+
+## 4. Test run for the container
+
+This can be done using `docker run -d -p 8080:8080 <your_container_name>`
+
+### Note
+
+This repository consists of a simple workflow, *telegram.yml*, that is executed whenever a change is committed to the **main** branch of this repository.
 
 When a change is committed to the main branch of this repository, the following message will be sent to my telegram account via a telegram bot: "A commit has been made to the repository!"
 
