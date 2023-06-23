@@ -12,7 +12,7 @@ Changes can be made to the *index.html* file.
 
 The contents can be viewed on https://jaztonchern.github.io/curly-pancake/. 
 
-If changes are made and committed, the site will be updated.
+If changes are made and committed, the site will be updated if there are no errors.
 
 ## 3. Build the container
 
