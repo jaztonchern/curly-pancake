@@ -8,7 +8,11 @@ This repository documents how to deploy a container on Docker.
 
 ## 2. Make edits to the content
 
-Changes can be made to the *index.html* file.
+Changes can be made to the *index.html* file. 
+
+The contents can be viewed on https://jaztonchern.github.io/curly-pancake/. 
+
+If changes are made and committed, the site will be updated.
 
 ## 3. Build the container
 
@@ -22,11 +26,17 @@ This can be done using `docker run -d -p 8080:8080 <your_container_name>`
 
 ### Note
 
-This repository consists of a simple workflow, *telegram.yml*, that is executed whenever a change is committed to the **main** branch of this repository.
+This repository consists of two simple workflows, *telegram.yml* and *test.yml*, that is executed whenever a change is committed to the **main** branch of this repository.
 
-When a change is committed to the main branch of this repository, the following message will be sent to my telegram account via a telegram bot: "A commit has been made to the repository!"
+When a change is committed to the main branch of this repository, the following message will be sent to my telegram account via a telegram bot: "A commit has been made to the repository!" 
 
-This is an example of the message:</br>
+If changes were made to *index.html* and committed, the html syntax will be checked to evaluate if there are any errors. Depending on whether there are any errors, one of the following message will be sent to my telegram account via the same bot: 
+
+* "Deployment to GitHub Pages was successful!" 
+
+* "Deployment unsuccessful ):"
+
+This is an example of what the message will look like:</br>
 <img width="414" alt="Screenshot 2023-06-21 at 15 11 49" src="https://github.com/jaztonchern/curly-pancake/assets/88361707/ada4854a-cf33-4c2f-bece-994efc4738b9"></br>
   
   
