@@ -18,10 +18,18 @@ jobs:
       - name: Run HTMLHint
         run: htmlhint index.html
           
-      - name: Send Telegram notification
+      - name: Send Telegram notification (success)
         if: ${{ success() }}
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_ID }}
           token: ${{ secrets.TELEGRAM_BOT }}
           message: "Deployment to GitHub Pages was successful!"
+
+      - name: Send Telegram notification (failure)
+        if: ${{ failure() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_ID }}
+          token: ${{ secrets.TELEGRAM_BOT }}
+          message: "Deployment unsuccessful ):"
