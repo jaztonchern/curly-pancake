@@ -1,6 +1,6 @@
 # curly-pancake
 
-This repository is a simple application that deploys a container.
+This repository is a simple application that deploys a container on Docker.
 
 ## 1. Clone the repository to a local device
 
