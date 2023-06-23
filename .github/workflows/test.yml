@@ -1,9 +1,12 @@
-name: Test Application
+name: Deploy to GitHub Pages
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,16 +18,27 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Build and Deploy
+        run: |
+          # Install dependencies and build the static assets
+          npm install
+          npm run build
 
-      - name: Run tests
-        run: npm test
-        
-      - name: Send notification to Telegram
-        uses: appleboy/telegram-action@master
+          # Configure Git
+          git config --global user.name "jaztonchern"
+          git config --global user.email secrets.EMAIL_ADDRESS
+
+          # Deploy to the gh-pages branch
+          git checkout -B gh-pages
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          git push -f origin gh-pages
+
+
+      - name: Send Telegram notification
         if: ${{ success() }}
+        uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_ID }}
           token: ${{ secrets.TELEGRAM_BOT }}
-          message: Test is successful!
+          message: "Deployment to GitHub Pages was successful!"
