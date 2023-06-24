@@ -1,6 +1,8 @@
 # curly-pancake
 
-This repository documents how to deploy a container on Docker.
+This repository is a page containing my personal information.
+
+Below documents how to edit the webpage locally and deploy in a container on Docker.
 
 ## 1. Clone the repository to a local device
 
