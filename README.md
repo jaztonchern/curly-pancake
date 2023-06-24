@@ -10,7 +10,7 @@ If changes are made and committed, the site will be updated if there are no erro
 
 </br></br>
 
-Below documents how to edit the webpage locally and deploy in a container on Docker after.
+Below documents how to edit the webpage locally and push to GitHub after.
 
 ## 1. Clone the repository to a local device
 
@@ -20,15 +20,19 @@ Below documents how to edit the webpage locally and deploy in a container on Doc
 
 Changes can be made to the *index.html* file from wherever it has been downloaded to. 
 
-## 3. Build the container
+## 3. Build the commit space
 
 Enter the directory of the cloned repository `cd curly-pancake`
 
-Build the container `docker build . -t <your_container_name>`, and replace `<your_container_name>` with any relevant name for your container.
+Add file to the commit space `git add <filename>`, and replace `<filename>` with any relevant name for your container.
 
-## 4. Test run for the container
+## 4. Commit the changes
 
-This can be done using `docker run -d -p 8080:8080 <your_container_name>`
+This can be done using `git commit -m "Commit message"`, where "Commit message" can be replaced with any relevant message.
+
+## 5. Push Changes: 
+
+Finally, push the committed changes to the remote repository. Use the following command: `git push -u origin main`
 
 ### Note
 
