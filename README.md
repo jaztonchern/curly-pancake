@@ -2,7 +2,15 @@
 
 This repository is a page containing my personal information.
 
-Below documents how to edit the webpage locally and deploy in a container on Docker.
+The contents of the page can be found and edited in the *index.html* file.
+
+The contents can be viewed on https://jaztonchern.github.io/curly-pancake/. 
+
+If changes are made and committed, the site will be updated if there are no errors.
+
+</br></br>
+
+Below documents how to edit the webpage locally and deploy in a container on Docker after.
 
 ## 1. Clone the repository to a local device
 
@@ -10,11 +18,7 @@ Below documents how to edit the webpage locally and deploy in a container on Doc
 
 ## 2. Make edits to the content
 
-Changes can be made to the *index.html* file. 
-
-The contents can be viewed on https://jaztonchern.github.io/curly-pancake/. 
-
-If changes are made and committed, the site will be updated if there are no errors.
+Changes can be made to the *index.html* file from wherever it has been downloaded to. 
 
 ## 3. Build the container
 
