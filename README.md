@@ -32,7 +32,7 @@ This can be done using `docker run -d -p 8080:8080 <your_container_name>`
 
 ### Note
 
-This repository consists of two simple workflows, *telegram.yml* and *test.yml*, that is executed whenever a change is committed to the **main** branch of this repository.
+This repository consists of two simple DevOps workflows, *telegram.yml* and *test.yml*, that is executed whenever a change is committed to the **main** branch of this repository.
 
 When a change is committed to the main branch of this repository, the following message will be sent to my telegram account via a telegram bot: "A commit has been made to the repository!" 
 
